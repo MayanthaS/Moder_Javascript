@@ -90,10 +90,51 @@ function myMarks(){
     console.log(arguments);
 }
 myMarks(80, 90, 75, 88);
-*/
+
 
 //--rest parameters---
 function myMarks(...marks){
     console.log(marks);
 }
 myMarks(80, 90, 75, 88);
+
+*/
+//spread operator
+let a = [10, 20, 30];
+let b = [40, 50, 60];
+let c = [...a, ...b];
+console.log(c);
+
+//--------
+let fullname = ['Mayantha', 'Sapumal'];
+console.log(fullname);
+console.log(...fullname);//split the array elements
+
+//---------
+let subject = "Maths";
+console.log(subject);
+console.log(...subject);//split the string characters
+
+//----objects
+let subjects = {
+    Maths: 80,
+    Science: 75,
+    English: 90
+};
+console.log(subject);
+console.log({...subject});//split the object elements
+let persona ={
+    name: "Mayantha",
+    age: 22,
+    address: "Colombo",
+    ...subjects
+};
+console.log(persona);
+console.log({...persona});//split the object elements   
+
+//-------
+const numbers = [10, 20, 30];
+function sum(x,y,z){
+    return x + y + z;
+}
+console.log(sum(...numbers));
