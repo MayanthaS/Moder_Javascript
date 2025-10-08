@@ -61,7 +61,7 @@ if(num > 10){
     console.log(num);
 } 
 console.log(num);
-*/
+
 //----template literals---
 
 //----concatination---
@@ -84,3 +84,9 @@ function Myname(name){
     return `My name is ${name.toUpperCase()}`;
 }
 console.log(Myname("Mayantha"));
+*/
+//--argument object--
+function myMarks(){
+    console.log(arguments);
+}
+myMarks(80, 90, 75, 88);
