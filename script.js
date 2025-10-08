@@ -84,9 +84,16 @@ function Myname(name){
     return `My name is ${name.toUpperCase()}`;
 }
 console.log(Myname("Mayantha"));
-*/
+
 //--argument object--
 function myMarks(){
     console.log(arguments);
+}
+myMarks(80, 90, 75, 88);
+*/
+
+//--rest parameters---
+function myMarks(...marks){
+    console.log(marks);
 }
 myMarks(80, 90, 75, 88);
