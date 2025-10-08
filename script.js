@@ -98,7 +98,7 @@ function myMarks(...marks){
 }
 myMarks(80, 90, 75, 88);
 
-*/
+
 //spread operator
 let a = [10, 20, 30];
 let b = [40, 50, 60];
@@ -138,3 +138,11 @@ function sum(x,y,z){
     return x + y + z;
 }
 console.log(sum(...numbers));
+
+*/
+//deafualt parameters
+function multiply(a, b=2){
+    return a * b;
+}
+console.log(multiply(5));
+console.log(multiply(5, 3));
