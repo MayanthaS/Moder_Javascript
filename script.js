@@ -146,3 +146,9 @@ function multiply(a, b=2){
 }
 console.log(multiply(5));
 console.log(multiply(5, 3));
+
+const bDay = (name, date=1, month="January", year=2000) => {
+    return `My name is ${name} and my birthday is on ${date} ${month} ${year}.`;
+}
+console.log(bDay("Mayantha", 22, "June", 2001));
+console.log(bDay("Kavindu"));
