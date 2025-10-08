@@ -50,7 +50,7 @@ if(num > 10){
     let num =15;
     console.log(num);
 }
-*/
+
 //---const---
 const num = 20; 
 if(num > 10){
@@ -61,3 +61,13 @@ if(num > 10){
     console.log(num);
 } 
 console.log(num);
+*/
+//----template literals---
+
+//----concatination---
+let name = "Mayantha";
+let age = 22;
+let address = "Colombo";
+
+let info = "My name is " + name + ", I'm " + age + " years old and I live in " + address + ".";
+console.log(info);
