@@ -77,3 +77,10 @@ let fname = "Mayantha";
 let lname = "Sapumal";
 let fullname =`My name is ${fname } ${lname}`;
 console.log(fullname);
+
+
+//-------
+function Myname(name){
+    return `My name is ${name.toUpperCase()}`;
+}
+console.log(Myname("Mayantha"));
