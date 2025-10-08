@@ -51,3 +51,13 @@ if(num > 10){
     console.log(num);
 }
 */
+//---const---
+const num = 20; 
+if(num > 10){
+    const greet = "Hello";
+    console.log(greet);
+    
+    const num =15;
+    console.log(num);
+} 
+console.log(num);
