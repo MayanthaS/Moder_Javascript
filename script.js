@@ -71,3 +71,9 @@ let address = "Colombo";
 
 let info = "My name is " + name + ", I'm " + age + " years old and I live in " + address + ".";
 console.log(info);
+
+//---Template literals---   
+let fname = "Mayantha";
+let lname = "Sapumal";
+let fullname =`My name is ${fname } ${lname}`;
+console.log(fullname);
