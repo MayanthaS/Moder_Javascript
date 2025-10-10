@@ -418,7 +418,7 @@ function sample(){
     console.log(this);
 }
 sample();
- */
+ 
 //----------------
 
 class Course{
@@ -433,3 +433,20 @@ class Course{
 let cou = new Course("Science");
 console.log(cou);
 cou.getMarks();
+*/
+//static keyword
+
+class Car{
+    constructor(brand){
+        this.brand = brand;
+    }
+    //static property
+    static company = "Toyota";
+    //static method
+    static getPrice(tax){
+        console.log(`Price is ${tax * 1000000}`);
+          
+    }
+}
+console.log(Car.company);
+Car.getPrice(0.15);
