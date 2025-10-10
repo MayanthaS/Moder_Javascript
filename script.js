@@ -195,3 +195,18 @@ const subjects =["Maths", "Science", "English"];
 for (let s of subjects){
     console.log(s);
 }
+
+const sym1 = Symbol();
+    console.log(typeof (sym1));
+    const sym2 = Symbol();
+    console.log((sym2));
+
+    let fname = Symbol("fname");
+    let lname = Symbol  ("lname");
+   
+    console.log(fname === lname);
+    console.log(fname);
+    console.log(lname);
+
+    console.log(fname.toString());
+
