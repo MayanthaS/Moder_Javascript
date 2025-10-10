@@ -398,7 +398,7 @@ console.log(nset);
 console.log(nset.size);
 console.log(nset.has("Science"));
 
- */
+
 //object construction
 function Course (_subject){
     this.subject = _subject;
@@ -407,9 +407,9 @@ function Course (_subject){
         console.log(this);
     }
 }
-let cou = new Course("Maths");
-console.log(cou);
-cou.getMarks();
+let cou1 = new Course("Maths");
+console.log(cou1);
+cou1.getMarks();
 
 //-------
 console.log(this);
@@ -418,3 +418,18 @@ function sample(){
     console.log(this);
 }
 sample();
+ */
+//----------------
+
+class Course{
+    constructor(_subject){
+        this.subject =_subject;
+    }
+    getMarks(){
+        console.log(`${this.subject}:80`);
+        console.log(this);
+    }
+}
+let cou = new Course("Science");
+console.log(cou);
+cou.getMarks();
