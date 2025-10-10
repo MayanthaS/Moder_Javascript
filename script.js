@@ -343,7 +343,7 @@ const{name, degree, age: stdAge, subjects} = std;
  let [sub1,sub2] =displaySubject();
  console.log(sub1);
  console.log(sub2);
- */
+
 
  //Map object(ES6)
 
@@ -373,3 +373,27 @@ for(let x of map){
 for(let x of map){
     console.log(`${x[0]}: ${x[1]}`);
 }
+    
+
+//sets
+let mySet = new Set();
+console.log(mySet);
+
+mySet.add("pasan");
+mySet.add("kavindu");
+mySet.add("nimesh");
+mySet.add("pasan");
+console.log(mySet);
+mySet.add("mayantha");
+
+for (let y of set){
+    console.log(y);
+}
+     */
+//-------------
+
+let  nset = new Set(["Maths", "Science", "English", "Maths"]);
+console.log(nset);
+
+console.log(nset.size);
+console.log(nset.has("Science"));
