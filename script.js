@@ -139,7 +139,7 @@ function sum(x,y,z){
 }
 console.log(sum(...numbers));
 
-*/
+
 //deafualt parameters
 function multiply(a, b=2){
     return a * b;
@@ -171,3 +171,16 @@ const bDay = function(name,birthYear = new Date()){
 }
 bDay("Mayantha", new Date(2001,5,22));
 bDay("Kavindu");
+*/
+//-----------------------
+//for  Loop
+//-----------------------
+const cities = ["colombo", "kandy", "galle"];
+for(let x = 0;x < cities.length; x++){
+    console.log(cities[x]);
+}
+//for of Loop
+const countries = ["Sri Lanka", "India", "USA"];
+for (let y of countries){
+    console.log(y);
+}
