@@ -309,6 +309,8 @@ console.log(age);
 
 //----
 //destructuring
+//object destructuring 
+/*
 const std ={
     name :"Kavindu",
     degree :"IT",
@@ -327,3 +329,17 @@ const{name, degree, age: stdAge, subjects} = std;
 
  const {age:a, degree:d} = std;
     console.log("My age is ${a} and my degree is ${d}");
+*/
+//array destructuring
+
+ const names =["Saduni", "Kavindu", "Nimesh"];
+
+ const [name1, name2, name3] = names;
+ console.log(name1);
+ console.log(name2);
+ console.log(name3);
+
+ const displaySubject =() =>["Maths", "Science", "English"];
+ let [sub1,sub2] =displaySubject();
+ console.log(sub1);
+ console.log(sub2);
