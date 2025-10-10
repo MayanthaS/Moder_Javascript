@@ -290,7 +290,7 @@ const salCal= (salry,improvement= 5)=>{
 }
 salCal(10000,10);
 salCal(10000);
-*/
+
 //-------------------
 
 //destructuring  object
@@ -329,7 +329,7 @@ const{name, degree, age: stdAge, subjects} = std;
 
  const {age:a, degree:d} = std;
     console.log("My age is ${a} and my degree is ${d}");
-*/
+
 //array destructuring
 
  const names =["Saduni", "Kavindu", "Nimesh"];
@@ -343,3 +343,33 @@ const{name, degree, age: stdAge, subjects} = std;
  let [sub1,sub2] =displaySubject();
  console.log(sub1);
  console.log(sub2);
+ */
+
+ //Map object(ES6)
+
+ let myMap = new Map();
+ console.log(myMap);
+
+
+ let map = new Map();
+ map.set("fname", "Mayantha");
+ map.set("lname", "Sapumal");
+ map.set("age", 22);
+
+ console.log(map);
+
+ //get values from a map
+ console.log(map.get("fname"));
+ console.log(map.get("age"));
+ 
+
+ console.log(map.has("lname"));
+ console.log(map.has("address"));
+    console.log(map.size);
+
+for(let x of map){
+    console.log(x);
+}
+for(let x of map){
+    console.log(`${x[0]}: ${x[1]}`);
+}
