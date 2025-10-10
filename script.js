@@ -147,8 +147,27 @@ function multiply(a, b=2){
 console.log(multiply(5));
 console.log(multiply(5, 3));
 
-const bDay = (name, date=1, month="January", year=2000) => {
+const bDayInfo = (name, date=1, month="January", year=2000) => {
     return `My name is ${name} and my birthday is on ${date} ${month} ${year}.`;
 }
-console.log(bDay("Mayantha", 22, "June", 2001));
-console.log(bDay("Kavindu"));
+console.log(bDayInfo("Mayantha", 22, "June", 2001));
+console.log(bDayInfo("Kavindu"));
+
+function getYear(currentYear, years=5){
+    return currentYear+years;
+}
+console.log(getYear(2025));
+console.log(getYear(2025, 10));
+
+//-----------------------
+function multiply(num1,num2=4){
+    return num1*num2;
+}
+console.log(multiply(6));
+console.log(multiply(8));
+
+const bDay = function(name,birthYear = new Date()){
+    console.log(`${name} was born in ${birthYear.getFullYear()}.`);
+}
+bDay("Mayantha", new Date(2001,5,22));
+bDay("Kavindu");
