@@ -171,7 +171,7 @@ const bDay = function(name,birthYear = new Date()){
 }
 bDay("Mayantha", new Date(2001,5,22));
 bDay("Kavindu");
-*/
+
 //-----------------------
 //for  Loop
 //-----------------------
@@ -183,4 +183,15 @@ for(let x = 0;x < cities.length; x++){
 const countries = ["Sri Lanka", "India", "USA"];
 for (let y of countries){
     console.log(y);
+}
+    */
+
+const names = ["Mayantha", "Kavindu", "Nimesh"];
+for (let n of names.entries()){// get each  element as an entry with the index
+    console.log(n);
+}
+///--------
+const subjects =["Maths", "Science", "English"];
+for (let s of subjects){
+    console.log(s);
 }
