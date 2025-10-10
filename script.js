@@ -184,7 +184,7 @@ const countries = ["Sri Lanka", "India", "USA"];
 for (let y of countries){
     console.log(y);
 }
-    */
+  
 
 const names = ["Mayantha", "Kavindu", "Nimesh"];
 for (let n of names.entries()){// get each  element as an entry with the index
@@ -210,3 +210,83 @@ const sym1 = Symbol();
 
     console.log(fname.toString());
 
+*/
+
+//function declaration
+function myAge(age){
+    console.log(`${age}`);
+}
+myAge(22);
+
+//function expression
+const myName = function(name){
+    console.log(`${name}`);
+}
+
+ //arrow functions
+ const myCountry =() =>{
+    console.log("Sri Lanka");
+ }
+    myCountry();
+
+const sum =(a ,b )=>a+b;
+console.log(sum(5, 10));
+
+const square = x => x * x;
+console.log(square(6));
+
+const city= name =>`My city is ${name}`;
+console.log(city("Colombo"));
+
+const city1 = (city1) =>{
+    let out = `My city is ${city1}`;
+    return out;
+}
+console.log(city1("Colombo"));
+
+//how to passing argument
+
+setTimeout(function(){
+    console.log("Hello");
+},5000);
+
+setTimeout (() =>{
+    console.log("Hello");
+},6000);    
+
+//----------------------
+const fact = function(n)  {
+    let f =1;
+    for(let i = n; i>1 ; i--){
+        f = f * i;
+    }
+    return f;
+}
+console.log(fact(5));
+
+const fact1 = n => {
+    let f =1;
+    for(let i = n; i>1 ; i--){
+        f = f * i;
+    }
+    return f;
+
+}
+console.log(fact1(5));
+
+
+console.log("Hello");
+//----------------------
+
+const myMarks = (...marks) =>{
+    console.log(marks);
+}
+myMarks(80, 90, 75, 88);
+
+//-------------------
+const salCal= (salry,improvement= 5)=>{
+    let nSal = salry*((improvement+100)/100);
+    console.log(`${nSal}`);
+}
+salCal(10000,10);
+salCal(10000);
