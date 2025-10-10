@@ -210,7 +210,7 @@ const sym1 = Symbol();
 
     console.log(fname.toString());
 
-*/
+
 
 //function declaration
 function myAge(age){
@@ -290,3 +290,40 @@ const salCal= (salry,improvement= 5)=>{
 }
 salCal(10000,10);
 salCal(10000);
+*/
+//-------------------
+
+//destructuring  object
+
+//get object vslues
+const user ={
+    first :"lahiru",
+    last :"perera",
+    age :22
+}
+
+const fname = user.first;
+const age = user.age;
+console.log(fname);
+console.log(age);
+
+//----
+//destructuring
+const std ={
+    name :"Kavindu",
+    degree :"IT",
+    age :23,
+    subjects :["Maths", "Science", "English"]
+}
+const{name, degree, age: stdAge, subjects} = std;
+ console.log(name);
+ console.log(degree);
+ console.log(stdAge);
+ console.log(subjects);
+ console.log(subjects[1]);
+
+ const {name: stdName} = std;
+ console.log(`My name is ${stdName}`);
+
+ const {age:a, degree:d} = std;
+    console.log("My age is ${a} and my degree is ${d}");
