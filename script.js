@@ -389,7 +389,7 @@ mySet.add("mayantha");
 for (let y of set){
     console.log(y);
 }
-     */
+    
 //-------------
 
 let  nset = new Set(["Maths", "Science", "English", "Maths"]);
@@ -397,3 +397,24 @@ console.log(nset);
 
 console.log(nset.size);
 console.log(nset.has("Science"));
+
+ */
+//object construction
+function Course (_subject){
+    this.subject = _subject;
+    this.getMarks = () =>{
+        console.log(`${this.subject}: 80`);
+        console.log(this);
+    }
+}
+let cou = new Course("Maths");
+console.log(cou);
+cou.getMarks();
+
+//-------
+console.log(this);
+
+function sample(){
+    console.log(this);
+}
+sample();
