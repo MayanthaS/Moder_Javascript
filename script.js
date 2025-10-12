@@ -450,3 +450,24 @@ class Car{
 }
 console.log(Car.company);
 Car.getPrice(0.15);
+
+//destructuring  after remain
+//object destructuring
+const std ={
+    name :"mayantha",
+    degree:"BSE",
+    age:22,
+    subjects:["Maths", "Web development", "English"]
+};
+const{name,degree,age:stdage, subjects} =std;
+console.log(name);
+console.log(degree);
+console.log(stdage);
+console.log(subjects);
+console.log(subjects[1]);
+
+const {age:a} = std;
+console.log(`My age is ${a}`);
+
+const {degree:d} = std;
+console.log(`My degree is ${d}`);
