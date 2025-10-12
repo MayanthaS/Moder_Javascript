@@ -496,3 +496,9 @@ map.set("fname","mayantha");
 map.set("lname","sapumal");
 map.set("age",22);
 console.log(map);
+//get values from a map
+console.log(map.get("fname"));
+console.log(map.get('age'));
+console.log(map.has("lname"));
+console.log(map.has("address"));
+console.log(map.size);
