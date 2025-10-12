@@ -471,3 +471,28 @@ console.log(`My age is ${a}`);
 
 const {degree:d} = std;
 console.log(`My degree is ${d}`);
+
+//array destructuring
+//after reaminning
+const names = ["mayantha","sapumal","pasan"];
+const[name1,name2,name3]=names;
+console.log(name1);
+console.log(name2);
+console.log(name3);
+
+
+const displaySubject =() =>["Webdevelopment","UI/UX","Programing In Python"];
+let[sub1,sub2,sub3]=displaySubject();
+console.log(sub1);
+console.log(sub2);
+console.log(sub3);
+
+//-----------------------
+//map object
+let myMap = new Map();
+console.log(myMap);
+let map = new Map();
+map.set("fname","mayantha");
+map.set("lname","sapumal");
+map.set("age",22);
+console.log(map);
