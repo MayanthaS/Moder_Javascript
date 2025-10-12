@@ -502,3 +502,12 @@ console.log(map.get('age'));
 console.log(map.has("lname"));
 console.log(map.has("address"));
 console.log(map.size);
+
+//sets
+ let mySet = new Set();
+ console.log(mySet);
+ myMap.set("pasan");
+ mySet.add("kavindu");
+ mySet.add("nimesh");
+ mySet.add("pasan");
+console.log(mySet);
