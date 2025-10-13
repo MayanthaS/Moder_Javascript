@@ -433,7 +433,7 @@ class Course{
 let cou = new Course("Science");
 console.log(cou);
 cou.getMarks();
-*/
+
 //static keyword
 
 class Car{
@@ -511,3 +511,18 @@ console.log(map.size);
  mySet.add("nimesh");
  mySet.add("pasan");
 console.log(mySet);
+*/
+
+//getters setters
+
+//normal function  inside an object
+
+const person ={
+    fname:"mayantha",
+    lname:"sapumal",
+    fullname:function(){
+        return`${this.fname} ${this.lname}`;
+    }
+
+};
+console.log(person.fullname());
