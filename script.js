@@ -628,7 +628,7 @@ console.log(ec.start());
 //Exponential operator
 console.log(2 ** 3);
 console.log(5 ** 4);
-*/
+
 //Array methods
 
 
@@ -776,3 +776,22 @@ const product =[
 
   // Add new product, then display all
   addProducts({ name: "Tablet", price: 20000, available: true }, getProduct);
+*/
+//------------
+//promises
+let pr = new Promise((resolve, reject) => {
+    let ans = 2 + 5;
+    setTimeout(() => {
+        if (ans === 7) {
+            resolve("Success");
+        }else{
+            reject("Failed");
+        }
+    }, 3000);
+});
+
+pr.then((message) =>{
+    console.log(message);
+}).catch((message) =>{
+    console.log(message);
+});
