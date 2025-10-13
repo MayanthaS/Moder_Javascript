@@ -734,3 +734,45 @@ let names = ["Mayantha", "Kavindu", "Nimesh"];
 console.log(names.includes("Kavindu"));
 console.log(names.includes("Pasan"));
 
+//-----------------------
+
+//promises
+
+const product =[
+{
+    name:"Laptop",
+    price: 50000,
+    available: true
+},
+{
+    name:"Mobile",
+    price: 30000,
+    available: false    
+}
+];
+//display products
+ function getProduct() {
+    setTimeout(() => {
+      let output = '';
+      product.forEach((p) => {
+        output += `
+          <div>
+            <h2>${p.name}</h2>
+            <p>${p.price}</p>
+            <h4>${p.available ? "Available" : "Not Available"}</h4>
+          </div>`;
+      });
+      document.body.innerHTML = output;
+    }, 1000);
+  }
+
+  // Add a new product, then call getProduct() after it’s added
+  function addProducts(newProduct, callback) {
+    setTimeout(() => {
+      product.push(newProduct);
+      callback(); // show updated list after adding
+    }, 2000);
+  }
+
+  // Add new product, then display all
+  addProducts({ name: "Tablet", price: 20000, available: true }, getProduct);
