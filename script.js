@@ -526,3 +526,44 @@ const person ={
 
 };
 console.log(person.fullname());
+
+const person1 = {
+   
+        //setter
+    set fullname(names){
+        const parts = names.split(' ');
+        this.fname = parts[0];
+        this.lname = parts[1];
+
+    },
+     fname:"kavindu",
+    lname:"perara",
+    //Getter
+    get fullname(){
+        return `${this.fname} ${this.lname}`;
+    }
+    
+    
+};
+console.log(person1.fullname);
+person1.fullname = "mayantha sapumal";
+person1.fullname = "nimesh de silva";
+person1.fullname = "pasan kumara";
+console.log(person1.fullname);
+const person2 ={
+    //setter
+    set fullname(names){
+        const parts = names.split(' ');
+        this.fname = parts[0];
+        this.lname = parts[1];
+    },
+    fname: "",
+    lname: "",
+    //getter
+    get fullname(){
+        return `${this.fname} ${this.lname}`;
+    }
+};
+
+person2.fullname = "nimesh silva";
+console.log(person2.fullname);
