@@ -2,6 +2,7 @@
 // Modern JavaScript
 //-----------------------
 
+
 //var is function scope|let & const are block scope
 
 //--var---
@@ -511,7 +512,7 @@ console.log(map.size);
  mySet.add("nimesh");
  mySet.add("pasan");
 console.log(mySet);
-*/
+
 
 //getters setters
 
@@ -627,3 +628,109 @@ console.log(ec.start());
 //Exponential operator
 console.log(2 ** 3);
 console.log(5 ** 4);
+*/
+//Array methods
+
+
+//---Filter
+const  students = [
+    {name:"Mayantha",age:22},
+    {name:"Kavindu",age:19},
+    {name:"Nimesh",age:21},
+    {name:"pasan",age:18}
+];
+const filterStd = students.filter((std) =>{
+    return std.age > 20;
+});
+
+console.log(filterStd);
+
+//Map
+const  student = [
+    {name:"Mayantha",age:22},
+    {name:"Kavindu",age:19},
+    {name:"Nimesh",age:21},
+    {name:"pasan",age:18}
+];
+const mapStd = student.map((std) =>{
+    return std.name;
+});
+
+console.log(mapStd);
+
+//find
+const  student1 = [
+    {name:"Mayantha",age:22},
+    {name:"Kavindu",age:19},
+    {name:"Nimesh",age:21},
+    {name:"pasan",age:18}
+];
+const findItem = student1.find((std)=>{ return std.age === 21; });
+console.log(findItem);
+
+
+//for each
+const  student2 = [
+    {name:"Mayantha",age:22},
+    {name:"Kavindu",age:19},
+    {name:"Nimesh",age:21},
+    {name:"pasan",age:18}
+];
+let sum = 0;
+student2.forEach((std)=> console.log(getSum(std.age)));
+function getSum(age){
+    sum += age;
+    return sum;    
+};
+console.log(sum);
+
+
+//some
+const  student3 = [
+    {name:"Mayantha",age:22},
+    {name:"Kavindu",age:19},
+    {name:"Nimesh",age:21},
+    {name:"pasan",age:18}
+];
+
+const aboveAge =student3.some((std) => std.age >21);
+console.log(aboveAge);
+
+//every
+const  student4 = [
+    {name:"Mayantha",age:22},
+    {name:"Kavindu",age:19},
+    {name:"Nimesh",age:21},
+    {name:"pasan",age:18}
+];
+const allAboveAge =student4.every((std) => std.age >17);
+console.log(allAboveAge);
+
+//reduce
+const subjects = [
+    {name:"Web Development", marks:80},
+    {name:"information Technology", marks:75},
+    {name:"English", marks:90},
+    {name:"Data Science", marks:85},
+    {name:"AI", marks:95}
+];
+const totalMarks = subjects.reduce((total,sub) => {
+    return total +sub.marks;
+}, 0);
+console.log(totalMarks);
+
+//sort
+
+const ages = [22,19,21,18,25,30];
+ages.sort((a,b) => a-b);
+console.log(ages);
+
+//Includes
+const num = [10,20,30,40,50];
+console.log(num.includes(30));
+console.log(num.includes(60));
+
+let names = ["Mayantha", "Kavindu", "Nimesh"];
+console.log(names.includes("Kavindu"));
+console.log(names.includes("Pasan"));
+
