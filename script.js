@@ -567,3 +567,63 @@ const person2 ={
 
 person2.fullname = "nimesh silva";
 console.log(person2.fullname);
+
+//-----------------------
+
+//getters setters in class
+
+class shape{
+    constructor(width,height){
+        this.width = width;
+        this.height = height;
+    }
+    //getter
+    get area(){
+        return this.width * this.height;
+    }
+    //setter
+    set area(values){
+        const val =values.split(' ');
+        this.width = val[0];
+        this.height = val[1];
+        
+    }
+}
+let sh = new shape(10,20);
+console.log(sh.area);
+console.log(sh.width);
+console.log(sh.height);
+
+sh.area = "30 40";
+console.log(sh.area);
+console.log(sh.width);
+console.log(sh.height);
+
+//inheritance
+
+class Car{
+    constructor(model){
+        this.model = model;
+    }
+    start(){
+        return `${this.model} starting`;
+    }
+
+}
+class ElectricCar extends Car{
+    constructor(model, battery){
+        super(model);
+        this.battery = battery;
+    }
+    start(){
+        return `${this.model} starting with battery ${this.battery}`;
+    }
+}
+let ec = new ElectricCar("Tesla", "100kWh");
+console.log(ec);
+console.log(ec.start());
+
+//-----------------------
+//Exponential operator
+console.log(2 ** 3);
+console.log(5 ** 4);
