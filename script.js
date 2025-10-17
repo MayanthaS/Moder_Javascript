@@ -848,7 +848,7 @@ function getProduct() {
   }).catch((err)=> {
     console
   })
-    */
+    
 //-----------------------
 function getUserCountry(url){
     return new Promise((resolve, reject) => {
@@ -874,4 +874,30 @@ getUserCountry('https://restcountries.com/v3.1/all').then((response)=>{
     console.log(response);
 }).catch((error) =>{
     console.error('Failed',error);
+});
+*/
+//-----------------------
+
+const pr1 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Promise 1 resolved");
+    }, 1000);
+});
+
+const pr2 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Promise 2 resolved");
+    }, 1000);
+});
+const pr3 = new Promise((resolve, reject) => {
+    setTimeout(() => {
+        resolve("Promise 3 resolved");
+    }, 1500);   
+});
+
+Promise.all([pr1, pr2, pr3]).then((messages) =>{
+    console.log(messages);
+})
+.catch((message) =>{
+    console.log(message);
 });
