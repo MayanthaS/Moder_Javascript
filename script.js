@@ -963,7 +963,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1')
 .then((response) => response.json())
 .then((data) => console.log(data))
 .catch((error) => console.error('Error:', error));
-*/
+
 fetch('https://jsonplaceholder.typicode.com/posts/1').then((res) => {
     if(res.ok){
         return res.json();
@@ -974,4 +974,28 @@ fetch('https://jsonplaceholder.typicode.com/posts/1').then((res) => {
     console.log(data);
 }).catch((error) => {
     console.error('Error:', error);
+});
+*/
+//-----------------------
+//create a new post
+fetch('https://jsonplaceholder.typicode.com/posts',{
+    method: 'POST',
+    headers:{
+        'Content-type': 'application/json',
+    },
+    body:JSON.stringify(
+      {
+        title: 'foo',
+        body: 'bar',
+        userId: 11,
+      }
+   )
+    }).then((response) => {
+    if(response.ok){
+        return response.json();
+    }else{
+        return Error("Error creating post");
+    }
+}).then((data) => {
+    console.log(data);
 });
