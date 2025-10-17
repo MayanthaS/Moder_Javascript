@@ -999,7 +999,7 @@ fetch('https://jsonplaceholder.typicode.com/posts',{
 }).then((data) => {
     console.log(data);
 });
-*/
+
 //-----------------------
 //---------padStart & padEnd
 let name = "Mayantha";
@@ -1021,4 +1021,16 @@ console.log(Object.entries(data));
 
 for (let [key, value] of Object.entries(data)){
     console.log(`${key}: ${value}`);
+}
+*/
+//Returns an array of a given object's own  property values
+const data = {
+    name: "Mayantha",
+    age: 22,
+    degree: "BSE"
+}
+console.log(Object.values(data));
+
+for (let value of Object.values(data)){
+    console.log(value);
 }
