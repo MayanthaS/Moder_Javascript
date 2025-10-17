@@ -1022,7 +1022,7 @@ console.log(Object.entries(data));
 for (let [key, value] of Object.entries(data)){
     console.log(`${key}: ${value}`);
 }
-*/
+
 //Returns an array of a given object's own  property values
 const data = {
     name: "Mayantha",
@@ -1034,3 +1034,26 @@ console.log(Object.values(data));
 for (let value of Object.values(data)){
     console.log(value);
 }
+*/
+//-----------------------
+//Trailing commas
+const numbers = [
+    10,
+    20,
+    30,
+    40,
+    50,
+];
+console.log(numbers);
+//-------------------
+const data = {
+    name: "Mayantha",
+    age: 22,
+    degree: "BSE",
+};
+console.log(data);
+//-----------------------
+function add(x,y){
+    return x + y;
+}
+console.log(add(5,10)); 
