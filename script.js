@@ -875,7 +875,7 @@ getUserCountry('https://restcountries.com/v3.1/all').then((response)=>{
 }).catch((error) =>{
     console.error('Failed',error);
 });
-*/
+
 //-----------------------
 
 const pr1 = new Promise((resolve, reject) => {
@@ -900,4 +900,33 @@ Promise.all([pr1, pr2, pr3]).then((messages) =>{
 })
 .catch((message) =>{
     console.log(message);
+});
+*/
+
+//Async await
+
+// Normal promise 
+function dialEmergency(numbers){
+    return new Promise((resolve,reject) =>{
+        console.log(`Dialing ${numbers}...`);
+        if(numbers === 119){
+            resolve("Emergency services contacted");
+        }else{
+            reject("Invalid emergency number");
+        }
+    })
+}
+function processCall(response){
+    return new Promise((resolve) =>{
+        console.log("Processing response...");
+        resolve(`Response processed: ${response}`);
+    });
+
+}
+dialEmergency(119).then((response) =>{
+    return processCall(response);
+}).then((processedResponse) =>{
+    console.log(processedResponse);
+}).catch((error) =>{
+    console.error(error);
 });
