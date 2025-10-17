@@ -901,7 +901,7 @@ Promise.all([pr1, pr2, pr3]).then((messages) =>{
 .catch((message) =>{
     console.log(message);
 });
-*/
+
 
 //Async await
 
@@ -953,5 +953,25 @@ async function handleOperation(){
     }
 }
 handleOperation();
+*/
+//-----------------------
+//fetch api
+//console.log(fetch('https://jsonplaceholder.typicode.com/posts/1'));
+/*
+fetch('https://jsonplaceholder.typicode.com/posts/1')
 
-
+.then((response) => response.json())
+.then((data) => console.log(data))
+.catch((error) => console.error('Error:', error));
+*/
+fetch('https://jsonplaceholder.typicode.com/posts/1').then((res) => {
+    if(res.ok){
+        return res.json();
+    }else{
+        throw new Error("Error fetching data");
+    }
+}).then((data) => {
+    console.log(data);
+}).catch((error) => {
+    console.error('Error:', error);
+});
