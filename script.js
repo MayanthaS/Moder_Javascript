@@ -930,3 +930,13 @@ dialEmergency(119).then((response) =>{
 }).catch((error) =>{
     console.error(error);
 });
+
+
+
+async function handleOperation(){
+    const response = await dialEmergency(119);
+   console.log("Response received");
+   const processedResponse = await processCall(response); 
+   console.log(processedResponse);  
+}
+handleOperation();
