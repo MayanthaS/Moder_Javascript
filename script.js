@@ -795,7 +795,7 @@ pr.then((message) =>{
 }).catch((message) =>{
     console.log(message);
 });
-*/
+
 //-----------------------
 const product =[
 {
@@ -848,3 +848,30 @@ function getProduct() {
   }).catch((err)=> {
     console
   })
+    */
+//-----------------------
+function getUserCountry(url){
+    return new Promise((resolve, reject) => {
+        const xmlreq = new XMLHttpRequest();
+        xmlreq.open("GET", url);
+
+        xmlreq.onload = () => {
+            if (xmlreq.status === 200) {
+              resolve(JSON.parse(xmlreq.response));
+            } else {
+                reject( Error(xmlreq.response));
+            }
+        };
+
+        xmlreq.onerror = () => {
+            reject(new Error("Network error"));
+        };
+
+        xmlreq.send();
+    });
+}
+getUserCountry('https://restcountries.com/v3.1/all').then((response)=>{
+    console.log(response);
+}).catch((error) =>{
+    console.error('Failed',error);
+});
