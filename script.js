@@ -940,3 +940,18 @@ async function handleOperation(){
    console.log(processedResponse);  
 }
 handleOperation();
+
+async function handleOperation(){
+    try{
+        const reponse = await dialEmergency(119);
+        console.log("Response received");
+        const processedResponse = await processCall(reponse);
+        console.log(processedResponse);
+    }
+    catch(error){
+        console.error(error);
+    }
+}
+handleOperation();
+
+
