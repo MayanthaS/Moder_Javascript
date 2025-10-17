@@ -975,7 +975,7 @@ fetch('https://jsonplaceholder.typicode.com/posts/1').then((res) => {
 }).catch((error) => {
     console.error('Error:', error);
 });
-*/
+
 //-----------------------
 //create a new post
 fetch('https://jsonplaceholder.typicode.com/posts',{
@@ -999,3 +999,26 @@ fetch('https://jsonplaceholder.typicode.com/posts',{
 }).then((data) => {
     console.log(data);
 });
+*/
+//-----------------------
+//---------padStart & padEnd
+let name = "Mayantha";
+console.log(name.padStart(15,"*"));
+
+let name1 = "Kavindu";
+console.log(name1.padEnd(15,"-"));
+//-----------------------
+let str = "Hello";
+console.log(str.repeat(3));
+//-----------------------
+//object Entries & Values
+const data = {
+    name: "Mayantha",
+    age: 22,
+    degree: "BSE"
+}
+console.log(Object.entries(data));
+
+for (let [key, value] of Object.entries(data)){
+    console.log(`${key}: ${value}`);
+}
